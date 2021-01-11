@@ -15,10 +15,10 @@ val id: Int,
 val overview: String,
 
 @ColumnInfo(name = "posterPath")
-val posterPath: String,
+val poster_path: String,
 
 @ColumnInfo(name = "releaseDate")
-val releaseDate: String,
+val release_date: String,
 
 @SerializedName("title")
 val title: String

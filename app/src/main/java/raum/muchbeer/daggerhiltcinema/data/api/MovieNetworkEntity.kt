@@ -17,11 +17,11 @@ data class MovieNetworkEntity (
 
     @SerializedName("poster_path")
     @Expose
-    val posterPath: String,
+    val poster_path: String,
 
     @SerializedName("release_date")
     @Expose
-    val releaseDate: String,
+    val release_date: String,
 
     @SerializedName("title")
     @Expose

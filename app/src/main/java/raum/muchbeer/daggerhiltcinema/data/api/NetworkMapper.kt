@@ -11,9 +11,9 @@ constructor() : EntityMapper<MovieNetworkEntity, Movie>{
     override fun mapFromEntityToDomain(entity: MovieNetworkEntity): Movie {
        return   Movie(
            id = entity.id,
-           overview = entity.posterPath,
-           posterPath = entity.posterPath,
-           releaseDate = entity.releaseDate,
+           overview = entity.overview,
+           poster_path = entity.poster_path,
+           release_date = entity.release_date,
            title = entity.title
        )
     }
@@ -22,8 +22,8 @@ constructor() : EntityMapper<MovieNetworkEntity, Movie>{
         return  MovieNetworkEntity(
            id = domain.id,
            overview = domain.overview,
-           posterPath = domain.posterPath,
-           releaseDate = domain.releaseDate,
+           poster_path = domain.poster_path,
+           release_date = domain.release_date,
            title = domain.title
        )
     }

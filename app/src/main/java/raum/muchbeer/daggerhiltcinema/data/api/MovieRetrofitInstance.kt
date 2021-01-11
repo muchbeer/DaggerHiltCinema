@@ -4,6 +4,7 @@ import android.util.Log
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import raum.muchbeer.daggerhiltcinema.BuildConfig
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
@@ -12,7 +13,7 @@ class MovieRetrofitInstance {
 
     companion object {
 
-        val BASE_URL = "https://api.themoviedb.org/3/"
+       // val BASE_URL = "https://api.themoviedb.org/3/"
 
         val httpLogger = HttpLoggingInterceptor().apply {
             this.level = HttpLoggingInterceptor.Level.BODY }
@@ -25,7 +26,7 @@ class MovieRetrofitInstance {
     fun movieInstance() : MovieService {
         Log.i("RetrofitInstance", "The application has access the CinemaService")
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BuildConfig.BASE_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
             .build()

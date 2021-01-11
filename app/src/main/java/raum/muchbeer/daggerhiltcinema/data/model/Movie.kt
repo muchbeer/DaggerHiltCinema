@@ -8,9 +8,9 @@ data class Movie (
 
     val overview: String,
 
-    val posterPath: String,
+    val poster_path: String,
 
-    val releaseDate: String,
+    val release_date: String,
 
     val title: String
 
