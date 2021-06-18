@@ -3,6 +3,7 @@ package raum.muchbeer.daggerhiltcinema
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -89,6 +90,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun selectedItem(movie : Movie) {
-       Snackbar.make(binding.coordinatorLayout, "selected ${movie.title}", Snackbar.LENGTH_LONG)
+       Snackbar.make(binding.coordinatorLayout, "selected ${movie.title}", Snackbar.LENGTH_LONG).show()
+      //  Toast.makeText(applicationContext, "selected ${movie.title}", Toast.LENGTH_LONG).show()
     }
 }
